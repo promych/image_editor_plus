@@ -19,14 +19,11 @@ class ImageLayer extends StatefulWidget {
 }
 
 class _ImageLayerState extends State<ImageLayer> {
-  double initialSize = 0;
   double initialRotation = 0;
 
   @override
   Widget build(BuildContext context) {
-    initialSize = widget.layerData.size;
     initialRotation = widget.layerData.rotation;
-
     return Positioned(
       left: widget.layerData.offset.dx,
       top: widget.layerData.offset.dy,
@@ -65,23 +62,32 @@ class _ImageLayerState extends State<ImageLayer> {
           setState(() {});
         },
         child: Transform(
-          transform: Matrix4(
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1 / widget.layerData.scale,
+          transform:
+              // Matrix4(
+              //   1,
+              //   0,
+              //   0,
+              //   0,
+              //   0,
+              //   1,
+              //   0,
+              //   0,
+              //   0,
+              //   0,
+              //   1,
+              //   0,
+              //   0,
+              //   1,
+              //   0,
+              //   1 / widget.layerData.scale,
+              // ),
+              Matrix4(
+            widget.layerData.scale, 0, 0,
+            0, // skewY could also be tan(ySkewAngle)
+            0, widget.layerData.scale, 0,
+            0, // skewX could also be tan(xSkewAngle)
+            0, 0, 1, 0, //
+            0, 0, 0, 1,
           ),
           child: SizedBox(
             width: widget.layerData.image.width.toDouble(),

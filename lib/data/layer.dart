@@ -52,12 +52,10 @@ class EmojiLayerData extends Layer {
 /// Attributes used by [ImageLayer]
 class ImageLayerData extends Layer {
   ImageItem image;
-  double size;
 
   ImageLayerData({
     Key? key,
     required this.image,
-    this.size = 64,
     Offset? offset,
     double? opacity,
     double? rotation,

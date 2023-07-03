@@ -31,7 +31,7 @@ class _EmojiLayerOverlayState extends State<EmojiLayerOverlay> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 150,
       decoration: const BoxDecoration(
         color: Colors.black87,
         borderRadius: BorderRadius.only(
@@ -46,7 +46,6 @@ class _EmojiLayerOverlayState extends State<EmojiLayerOverlay> {
               style: const TextStyle(color: Colors.white),
             ),
           ),
-          const Divider(),
           Slider(
               activeColor: Colors.white,
               inactiveColor: Colors.grey,
@@ -68,23 +67,19 @@ class _EmojiLayerOverlayState extends State<EmojiLayerOverlay> {
                 });
               }),
           const SizedBox(height: 10),
-          Row(children: [
-            Expanded(
-              child: TextButton(
-                onPressed: () {
-                  removedLayers.add(layers.removeAt(widget.index));
-                  Navigator.pop(context);
-                  widget.onUpdate();
-                  // back(context);
-                  // setState(() {});
-                },
-                child: Text(
-                  i18n('Remove'),
-                  style: const TextStyle(color: Colors.white),
-                ),
-              ),
+          TextButton(
+            onPressed: () {
+              removedLayers.add(layers.removeAt(widget.index));
+              Navigator.pop(context);
+              widget.onUpdate();
+              // back(context);
+              // setState(() {});
+            },
+            child: Text(
+              i18n('Remove'),
+              style: const TextStyle(color: Colors.white),
             ),
-          ]),
+          ),
         ],
       ),
     );

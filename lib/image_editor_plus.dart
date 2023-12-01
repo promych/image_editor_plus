@@ -27,7 +27,7 @@ class ImageEditor extends StatelessWidget {
   final Widget? progressIndicator;
 
   const ImageEditor(
-      {Key? key,
+      {super.key,
       this.image,
       this.images,
       this.savePath,
@@ -36,8 +36,7 @@ class ImageEditor extends StatelessWidget {
       this.allowMultiple = false,
       this.maxLength = 99,
       this.progressIndicator,
-      Color? appBar})
-      : super(key: key);
+      Color? appBar});
 
   @override
   Widget build(BuildContext context) {

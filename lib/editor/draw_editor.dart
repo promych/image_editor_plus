@@ -12,9 +12,9 @@ class ImageEditorDrawing extends StatefulWidget {
   final Uint8List image;
 
   const ImageEditorDrawing({
-    Key? key,
+    super.key,
     required this.image,
-  }) : super(key: key);
+  });
 
   @override
   State<ImageEditorDrawing> createState() => _ImageEditorDrawingState();

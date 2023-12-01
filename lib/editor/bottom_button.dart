@@ -8,12 +8,12 @@ class BottomButton extends StatelessWidget {
   final String text;
 
   const BottomButton({
-    Key? key,
+    super.key,
     this.onTap,
     this.onLongPress,
     required this.icon,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

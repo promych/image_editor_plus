@@ -13,13 +13,13 @@ class FilterAppliedImage extends StatelessWidget {
   final double opacity;
 
   FilterAppliedImage({
-    Key? key,
+    super.key,
     required this.image,
     required this.filter,
     this.fit,
     this.onProcess,
     this.opacity = 1,
-  }) : super(key: key) {
+  }) {
     // process filter in background
     if (onProcess != null) {
       // no filter supplied

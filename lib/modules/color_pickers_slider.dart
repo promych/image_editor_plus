@@ -5,10 +5,10 @@ import 'colors_picker.dart';
 
 class ColorPickersSlider extends StatefulWidget {
   const ColorPickersSlider({
-    Key? key,
+    super.key,
     required this.blurLayer,
     required this.onUpdate,
-  }) : super(key: key);
+  });
 
   final BackgroundBlurLayerData blurLayer;
   final void Function(BackgroundBlurLayerData) onUpdate;

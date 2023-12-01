@@ -10,7 +10,7 @@ import 'package:image_editor/image_editor.dart' as image_editor;
 class ImageCropper extends StatefulWidget {
   final Uint8List image;
 
-  const ImageCropper({Key? key, required this.image}) : super(key: key);
+  const ImageCropper({super.key, required this.image});
 
   @override
   createState() => _ImageCropperState();

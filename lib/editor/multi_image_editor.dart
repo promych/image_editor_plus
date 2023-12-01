@@ -16,14 +16,14 @@ class MultiImageEditor extends StatefulWidget {
   final bool allowGallery, allowCamera, allowMultiple;
 
   const MultiImageEditor({
-    Key? key,
+    super.key,
     this.images = const [],
     this.savePath,
     this.allowCamera = false,
     this.allowGallery = false,
     this.allowMultiple = false,
     this.maxLength = 99,
-  }) : super(key: key);
+  });
 
   @override
   createState() => _MultiImageEditorState();

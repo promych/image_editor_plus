@@ -16,10 +16,10 @@ class ImageFilters extends StatefulWidget {
   final bool useCache;
 
   const ImageFilters({
-    Key? key,
+    super.key,
     required this.image,
     this.useCache = true,
-  }) : super(key: key);
+  });
 
   @override
   createState() => _ImageFiltersState();

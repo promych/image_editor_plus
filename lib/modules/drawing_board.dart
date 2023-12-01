@@ -16,11 +16,11 @@ class Signature extends StatefulWidget {
   /// constructor
   const Signature({
     required this.controller,
-    Key? key,
+    super.key,
     this.backgroundColor = Colors.grey,
     this.width,
     this.height,
-  }) : super(key: key);
+  });
 
   /// signature widget controller
   final SignatureController controller;

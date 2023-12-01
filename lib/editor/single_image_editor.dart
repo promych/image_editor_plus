@@ -31,14 +31,14 @@ class SingleImageEditor extends StatefulWidget {
   final Widget? progressIndicator;
 
   const SingleImageEditor({
-    Key? key,
+    super.key,
     this.savePath,
     this.image,
     this.imageList,
     this.allowCamera = false,
     this.allowGallery = false,
     this.progressIndicator,
-  }) : super(key: key);
+  });
 
   @override
   createState() => _SingleImageEditorState();
@@ -342,7 +342,8 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
 
                     setState(() => isLoading = false);
 
-                    if (!mounted || mergedImage == null) return;
+                    if (!mounted) return;
+                    if (mergedImage == null) return;
 
                     Uint8List? croppedImage = await Navigator.push(
                       context,
@@ -377,7 +378,8 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
 
                     setState(() => isLoading = false);
 
-                    if (!mounted || mergedImage == null) return;
+                    if (!mounted) return;
+                    if (mergedImage == null) return;
 
                     Uint8List? drawing = await Navigator.push(
                       context,

@@ -14,7 +14,7 @@ dependencies:
   image_picker: ">=1.1.2 <2.0.0"
   screenshot: ^3.0.0
   flutter_colorpicker: ^1.1.0
-  extended_image: ^8.2.1
+  extended_image: ^8.3.0
   image: ^4.2.0
   image_editor: ^1.5.1
   colorfilter_generator: ^0.0.8
